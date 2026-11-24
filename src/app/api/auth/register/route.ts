@@ -85,7 +85,7 @@ export async function POST(request: NextRequest) {
       assignedRole = 'owner'
     }
 
-    // 6. Create User record in database
+    // 6. Create User record in database (activated immediately without email verification)
     const newUser = await db.user.create({
       data: {
         name: name.trim(),
@@ -93,9 +93,9 @@ export async function POST(request: NextRequest) {
         password: hashedPassword,
         role: assignedRole,
         isActive: true,
-        emailVerified: false,
-        verificationToken: hashedVerificationToken,
-        verificationExpires,
+        emailVerified: true,
+        verificationToken: null,
+        verificationExpires: null,
         companyMemberships: {
           create: {
             companyId: company.id,
@@ -113,26 +113,16 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    // 7. Dispatch verification email / telemetry notification
-    const emailResult = await sendVerificationEmail(cleanEmail, rawVerificationToken, newUser.name)
-
     return NextResponse.json(
       {
         success: true,
-        message: 'Account registered successfully. Please verify your email before signing in.',
+        message: 'Account registered and activated successfully. You can sign in immediately.',
         user: {
           id: newUser.id,
           name: newUser.name,
           email: newUser.email,
           role: newUser.role,
           companyName: company.name,
-        },
-        verification: {
-          emailSent: emailResult.delivered,
-          providerConfigured: emailResult.providerConfigured,
-          notice: emailResult.message,
-          actionUrl: emailResult.actionUrl,
-          token: emailResult.token,
         },
       },
       { status: 201 }

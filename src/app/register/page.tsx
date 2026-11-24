@@ -368,31 +368,20 @@ export default function RegisterPage() {
                 </div>
               </div>
 
-              {/* Email Verification Status Notification */}
-              <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-left text-xs font-manrope text-amber-900 space-y-1">
-                <p className="font-semibold text-amber-950">Next Step: Email Verification</p>
-                <p className="text-[11px] leading-relaxed text-amber-800">
-                  {successData.verification?.notice}
+              {/* Ready to Sign In Notification */}
+              <div className="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-left text-xs font-manrope text-emerald-900 space-y-1">
+                <p className="font-semibold text-emerald-950">Registration Complete: Direct Access Enabled</p>
+                <p className="text-[11px] leading-relaxed text-emerald-800">
+                  Your enterprise account is fully activated. Email verification is not required — you may proceed directly to the login portal.
                 </p>
-                {successData.verification?.token && (
-                  <div className="mt-2 pt-2 border-t border-amber-200/70 font-mono text-[10px] text-amber-950">
-                    <span>Generated One-Time Token: </span>
-                    <span className="font-bold select-all bg-amber-200/60 px-1.5 py-0.5 rounded">
-                      {successData.verification.token}
-                    </span>
-                  </div>
-                )}
               </div>
 
               <div className="pt-2">
                 <Link
-                  href={
-                    successData.verification?.actionUrl ||
-                    `/verify-email?email=${encodeURIComponent(successData.user?.email || '')}`
-                  }
+                  href="/login"
                   className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-xl bg-[#EA6113] hover:bg-[#F88F22] text-white font-manrope font-bold text-xs uppercase tracking-wider transition-all shadow-md"
                 >
-                  <span>Proceed to Email Verification</span>
+                  <span>Proceed to Sign In</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

@@ -85,16 +85,12 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // 5. Check email verification status
+    // 5. Ensure user is marked verified (no email verification required)
     if (!user.emailVerified) {
-      return NextResponse.json(
-        {
-          error: 'Your email address has not been verified yet. Please check your inbox or request a verification link.',
-          unverified: true,
-          email: user.email,
-        },
-        { status: 403 }
-      )
+      await db.user.update({
+        where: { id: user.id },
+        data: { emailVerified: true },
+      }).catch(() => {})
     }
 
     // 6. Reset failed attempts upon successful login
