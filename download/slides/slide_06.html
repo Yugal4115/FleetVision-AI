@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <title>System Architecture - FleetVision AI</title>
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { overflow: hidden; }
+    .arch-layer {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .arch-layer:hover { border-color: var(--primary-dim); }
+    .arch-layer-frontend { border-color: var(--primary); }
+    .arch-layer-api { border-color: var(--accent); }
+    .arch-layer-backend { border-color: var(--primary-light); }
+    .arch-layer-data { border-color: var(--accent-light); }
+    .arrow-connector {
+      width: 2px;
+      height: 18px;
+      background: linear-gradient(to bottom, var(--primary), transparent);
+      margin: 0 auto;
+      position: relative;
+    }
+    .arrow-connector::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: -4px;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid var(--primary);
+    }
+    .tech-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      background: rgba(20,184,166,0.08);
+      color: var(--primary-light);
+      border: 1px solid rgba(20,184,166,0.2);
+      margin: 3px;
+      white-space: nowrap;
+    }
+    .tech-chip-cyan {
+      background: rgba(6,182,212,0.08);
+      color: var(--accent-light);
+      border-color: rgba(6,182,212,0.2);
+    }
+    .tech-chip-amber {
+      background: rgba(245,158,11,0.08);
+      color: #fbbf24;
+      border-color: rgba(245,158,11,0.2);
+    }
+    .tech-chip-green {
+      background: rgba(16,185,129,0.08);
+      color: #34d399;
+      border-color: rgba(16,185,129,0.2);
+    }
+    .category-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      min-width: 100px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="position: relative;">
+    <div style="display: flex; flex-direction: column; height: calc(720px - 112px);">
+      
+      <!-- Header -->
+      <div class="section-tag">Architecture</div>
+      <h1 style="font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 28px;">System Architecture & Technology Stack</h1>
+
+      <!-- Two Columns -->
+      <div style="display: grid; grid-template-columns: 42% 58%; gap: 40px; flex: 1;">
+
+        <!-- Left Column: Architecture Diagram -->
+        <div>
+          <div style="font-size: 18px; font-weight: 700; color: var(--primary-light); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+            <i class="material-icons" style="font-size: 20px;">layers</i>
+            Architecture
+          </div>
+
+          <!-- Frontend Layer -->
+          <div class="arch-layer arch-layer-frontend">
+            <div style="font-size: 15px; font-weight: 700; color: var(--primary-light); margin-bottom: 6px;">React Frontend</div>
+            <div style="font-size: 11px; color: var(--text-dim);">Tailwind CSS · Chart.js · Leaflet Maps</div>
+          </div>
+          <div class="arrow-connector"></div>
+
+          <!-- API/Auth Layer -->
+          <div class="arch-layer arch-layer-api">
+            <div style="font-size: 15px; font-weight: 700; color: var(--accent-light); margin-bottom: 6px;">REST API / JWT Auth</div>
+            <div style="font-size: 11px; color: var(--text-dim);">Spring Security · Token-based · Role-based Access</div>
+          </div>
+          <div class="arrow-connector"></div>
+
+          <!-- Backend Layer -->
+          <div class="arch-layer arch-layer-backend">
+            <div style="font-size: 15px; font-weight: 700; color: var(--primary-light); margin-bottom: 6px;">Spring Boot Backend</div>
+            <div style="font-size: 11px; color: var(--text-dim);">Business Logic · Data Processing · API Controllers</div>
+          </div>
+          <div class="arrow-connector"></div>
+
+          <!-- Data Layer (3 boxes side by side) -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+            <div class="arch-layer arch-layer-data" style="padding: 12px 10px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--accent-light);">MySQL DB</div>
+              <div style="font-size: 10px; color: var(--text-dim);">Prisma ORM</div>
+            </div>
+            <div class="arch-layer arch-layer-data" style="padding: 12px 10px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--accent-light);">Python AI</div>
+              <div style="font-size: 10px; color: var(--text-dim);">FastAPI</div>
+            </div>
+            <div class="arch-layer arch-layer-data" style="padding: 12px 10px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--accent-light);">External</div>
+              <div style="font-size: 10px; color: var(--text-dim);">Maps · Weather</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Technology Stack -->
+        <div>
+          <div style="font-size: 18px; font-weight: 700; color: var(--primary-light); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+            <i class="material-icons" style="font-size: 20px;">code</i>
+            Technology Stack
+          </div>
+
+          <!-- Frontend -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <span class="category-label" style="color: var(--primary-light);">Frontend</span>
+              <div style="display: flex; flex-wrap: wrap;">
+                <span class="tech-chip">React.js</span>
+                <span class="tech-chip">Tailwind CSS</span>
+                <span class="tech-chip">Chart.js</span>
+                <span class="tech-chip">Leaflet Maps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <span class="category-label" style="color: var(--accent-light);">Backend</span>
+              <div style="display: flex; flex-wrap: wrap;">
+                <span class="tech-chip tech-chip-cyan">Spring Boot</span>
+                <span class="tech-chip tech-chip-cyan">Spring Security JWT</span>
+                <span class="tech-chip tech-chip-cyan">Spring Data JPA</span>
+                <span class="tech-chip tech-chip-cyan">REST APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI/ML -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <span class="category-label" style="color: #fbbf24;">AI / ML</span>
+              <div style="display: flex; flex-wrap: wrap;">
+                <span class="tech-chip tech-chip-amber">Python</span>
+                <span class="tech-chip tech-chip-amber">FastAPI</span>
+                <span class="tech-chip tech-chip-amber">Scikit-learn</span>
+                <span class="tech-chip tech-chip-amber">XGBoost</span>
+                <span class="tech-chip tech-chip-amber">Pandas</span>
+                <span class="tech-chip tech-chip-amber">NumPy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 14px;">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <span class="category-label" style="color: #34d399;">DevOps</span>
+              <div style="display: flex; flex-wrap: wrap;">
+                <span class="tech-chip tech-chip-green">Docker</span>
+                <span class="tech-chip tech-chip-green">Git</span>
+                <span class="tech-chip tech-chip-green">GitHub</span>
+                <span class="tech-chip tech-chip-green">Postman</span>
+                <span class="tech-chip tech-chip-green">Maven</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Data Flow Note -->
+          <div style="background: rgba(20,184,166,0.06); border: 1px solid rgba(20,184,166,0.15); border-radius: 10px; padding: 16px 20px; display: flex; align-items: center; gap: 14px;">
+            <i class="material-icons" style="color: var(--primary); font-size: 24px;">info</i>
+            <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Data flows from React UI through Spring Boot REST APIs to MySQL. AI predictions are handled by Python FastAPI microservices, called asynchronously by the backend for real-time intelligence delivery.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI | Zeroth Review</span>
+      <span>06</span>
+    </div>
+
+    <!-- Speaker Notes -->
+    <aside data-notes class="hidden">
+      This slide presents the system architecture and technology stack powering FleetVision AI. The architecture follows a layered approach with clear separation of concerns.
+
+      At the top, the React Frontend provides the user interface built with Tailwind CSS for styling, Chart.js for data visualizations, and Leaflet for interactive map displays. Users interact with dashboards, reports, and management interfaces through this layer.
+
+      All communication passes through the REST API layer secured by Spring Security with JWT authentication. Token-based auth ensures secure access, while role-based access control differentiates between admin, manager, and driver roles.
+
+      The Spring Boot Backend forms the core application layer, handling business logic, data processing, and API controllers. It orchestrates requests between the frontend, database, and AI services.
+
+      At the data layer, we have three components: MySQL Database managed through Prisma ORM for structured fleet data, Python AI services running on FastAPI for all seven machine learning predictions, and External APIs including Maps for routing and Weather data for risk analysis.
+
+      The technology stack spans four categories. Frontend uses React.js with Tailwind CSS and Chart.js for rich visualizations. Backend runs on Spring Boot with Spring Security for JWT auth and Spring Data JPA for database operations. The AI/ML layer uses Python with FastAPI, Scikit-learn for classification models, XGBoost for regression predictions, and Pandas and NumPy for data processing. DevOps tooling includes Docker for containerization, Git and GitHub for version control, Postman for API testing, and Maven for Java dependency management.
+    </aside>
+  </div>
+</body>
+</html>

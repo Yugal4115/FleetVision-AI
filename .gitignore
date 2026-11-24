@@ -1,0 +1,53 @@
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# Generated Next.js build output
+.next/
+out/
+
+# Local project backups
+backups/
+*.bak
+
+# TypeScript build cache
+*.tsbuildinfo
+next-env.d.ts.bak
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Local SQLite databases and sidecar files (Strict Exclusion)
+db/
+*.db
+*.db-*
+*.db.bak
+*.sqlite
+*.sqlite3
+prisma/db/
+prisma/db/*.db
+prisma/db/*.db-journal
+prisma/db/*.db-wal
+prisma/db/*.db-shm
+
+# Diagnostics, logs & temporary execution artifacts
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dev.log
+server.log
+tool-results/
+bun.lock
+bun.lockb
+*.pid
+.zscripts/*.pid
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

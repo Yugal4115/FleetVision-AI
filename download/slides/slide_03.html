@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    .split-layout {
+      display: flex;
+      gap: 40px;
+      height: calc(100% - 100px);
+      margin-top: 16px;
+    }
+    .left-col { flex: 0 0 58%; display: flex; flex-direction: column; }
+    .right-col { flex: 0 0 42%; display: flex; flex-direction: column; }
+    .obj-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+    .obj-list li {
+      position: relative;
+      padding-left: 22px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+    .obj-list li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10px;
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #14b8a6;
+    }
+    .image-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="display:flex; flex-direction:column;">
+    <div class="split-layout">
+      <!-- Left Column (60%) -->
+      <div class="left-col">
+        <div class="section-tag">Objectives</div>
+        <h2 style="font-family:'Inter',sans-serif; font-size:32px; font-weight:700; color:#f1f5f9; margin:0 0 20px 0;">What We Aim to Achieve</h2>
+        <ul class="obj-list">
+          <li>Digitize complete fleet operations end-to-end</li>
+          <li>Monitor vehicles in real-time with GPS tracking</li>
+          <li>Improve driver safety through behavior analysis</li>
+          <li>Reduce fuel consumption by 15–20% with AI</li>
+          <li>Predict maintenance before breakdowns occur</li>
+          <li>Optimize routes using AI algorithms</li>
+          <li>Generate actionable business analytics</li>
+          <li>Reduce overall operational costs by 25%</li>
+          <li>Improve fleet utilization and customer satisfaction</li>
+        </ul>
+      </div>
+
+      <!-- Right Column (40%) -->
+      <div class="right-col">
+        <div class="image-card">
+          <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ba0e6fb2242a.png" alt="FleetVision AI Dashboard Preview">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI | Zeroth Review</span>
+      <span>03</span>
+    </div>
+  </div>
+
+  <aside data-notes class="hidden">
+    These are the nine core objectives that drive every design and implementation decision in FleetVision AI. First, we aim to digitize complete fleet operations end-to-end, replacing the scattered spreadsheets and paper records that most companies still rely on with a unified digital platform. Second, real-time GPS monitoring so fleet managers know exactly where every vehicle is at any given moment. Third, improving driver safety through systematic behavior analysis — we want to catch risky patterns like overspeeding and harsh braking before they result in accidents. Fourth, and one of our headline targets, reducing fuel consumption by fifteen to twenty percent using AI-driven route optimization and driving recommendations. Fifth, predictive maintenance — the system should flag potential vehicle issues before they become costly roadside breakdowns, targeting eighty-five percent prediction accuracy. Sixth, AI-powered route optimization that considers distance, traffic patterns, and fuel efficiency simultaneously. Seventh, generating actionable business analytics so managers can make data-driven decisions about fleet expansion, vehicle replacement, and driver incentives. Eighth, reducing overall operational costs by twenty-five percent through the combined effect of all these improvements. And ninth, ultimately improving fleet utilization and customer satisfaction by ensuring deliveries happen on time, every time. The dashboard preview on the right gives you a sense of what the final user interface will look like — clean, information-rich, and designed for at-a-glance decision-making.
+  </aside>
+</body>
+</html>

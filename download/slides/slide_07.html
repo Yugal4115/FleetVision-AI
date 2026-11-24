@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <title>Database & API - FleetVision AI</title>
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { overflow: hidden; }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .stat-card:hover { border-color: var(--primary-dim); }
+    .stat-number {
+      font-family: var(--font-num);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary-light);
+      line-height: 1.1;
+    }
+    .stat-desc {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+    .endpoint-row {
+      display: flex;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      background: rgba(20,184,166,0.04);
+      border: 1px solid rgba(20,184,166,0.08);
+    }
+    .endpoint-method {
+      font-family: var(--font-num);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-right: 10px;
+      flex-shrink: 0;
+      min-width: 36px;
+      text-align: center;
+    }
+    .method-get { background: rgba(16,185,129,0.15); color: #34d399; }
+    .method-post { background: rgba(6,182,212,0.15); color: #22d3ee; }
+    .method-put { background: rgba(245,158,11,0.15); color: #fbbf24; }
+    .endpoint-path {
+      font-family: var(--font-num);
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    .api-stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: var(--font-num);
+      background: rgba(20,184,166,0.1);
+      color: var(--primary-light);
+      border: 1px solid rgba(20,184,166,0.2);
+      margin: 3px;
+    }
+    .table-list-item {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 11px;
+      color: var(--text-secondary);
+      background: rgba(100,116,139,0.08);
+      border: 1px solid rgba(100,116,139,0.15);
+      margin: 2px;
+    }
+    .module-group {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="position: relative;">
+    <div style="display: flex; flex-direction: column; height: calc(720px - 112px);">
+      
+      <!-- Header -->
+      <div class="section-tag">Database & API</div>
+      <h1 style="font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 24px;">Data Architecture</h1>
+
+      <!-- Two Columns -->
+      <div style="display: grid; grid-template-columns: 46% 54%; gap: 36px; flex: 1;">
+
+        <!-- Left Column: Database Schema -->
+        <div>
+          <div style="font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+            <i class="material-icons" style="font-size: 18px; color: var(--primary);">storage</i>
+            Database Schema
+          </div>
+
+          <!-- 2x2 Stats Grid -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px;">
+            <div class="stat-card">
+              <div class="stat-number">22–25</div>
+              <div class="stat-desc">Total normalized tables</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10</div>
+              <div class="stat-desc">Core modules covered</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">3</div>
+              <div class="stat-desc">Entity groups defined</div>
+            </div>
+            <div class="stat-card" style="border-color: var(--primary-dim);">
+              <div class="stat-number" style="font-size: 18px;">SQLite + Prisma</div>
+              <div class="stat-desc">Database engine & ORM</div>
+            </div>
+          </div>
+
+          <!-- Entity Groups -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px;">
+            
+            <div class="module-group">Core Entities</div>
+            <div style="margin-bottom: 4px;">
+              <span class="table-list-item">Users</span>
+              <span class="table-list-item">Vehicles</span>
+              <span class="table-list-item">Drivers</span>
+            </div>
+
+            <div class="module-group">Operations</div>
+            <div style="margin-bottom: 4px;">
+              <span class="table-list-item">Trips</span>
+              <span class="table-list-item">Fuel Logs</span>
+              <span class="table-list-item">Maintenance</span>
+              <span class="table-list-item">Expenses</span>
+            </div>
+
+            <div class="module-group">Intelligence</div>
+            <div>
+              <span class="table-list-item">AI Predictions</span>
+              <span class="table-list-item">Notifications</span>
+              <span class="table-list-item">Audit Logs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: REST API -->
+        <div>
+          <div style="font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <i class="material-icons" style="font-size: 18px; color: var(--accent);">api</i>
+            REST API Endpoints
+          </div>
+
+          <!-- API Stats Badges -->
+          <div style="margin-bottom: 14px;">
+            <span class="api-stat-badge"><i class="material-icons" style="font-size: 14px;">link</i> 16 Endpoints</span>
+            <span class="api-stat-badge"><i class="material-icons" style="font-size: 14px;">sync</i> Full CRUD</span>
+            <span class="api-stat-badge"><i class="material-icons" style="font-size: 14px;">lock</i> JWT Auth</span>
+            <span class="api-stat-badge"><i class="material-icons" style="font-size: 14px;">psychology</i> AI Routes</span>
+          </div>
+
+          <!-- Endpoints List -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; max-height: 360px; overflow: hidden;">
+            
+            <div class="endpoint-row">
+              <span class="endpoint-method method-post">POST</span>
+              <span class="endpoint-path">/api/auth/login</span>
+            </div>
+
+            <div class="endpoint-row">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/vehicles</span>
+            </div>
+            <div class="endpoint-row">
+              <span class="endpoint-method method-post">POST</span>
+              <span class="endpoint-path">/api/vehicles</span>
+            </div>
+
+            <div class="endpoint-row">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/drivers</span>
+            </div>
+            <div class="endpoint-row">
+              <span class="endpoint-method method-post">POST</span>
+              <span class="endpoint-path">/api/drivers</span>
+            </div>
+
+            <div class="endpoint-row">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/trips</span>
+            </div>
+            <div class="endpoint-row">
+              <span class="endpoint-method method-post">POST</span>
+              <span class="endpoint-path">/api/trips</span>
+            </div>
+
+            <div class="endpoint-row">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/fuel</span>
+            </div>
+            <div class="endpoint-row">
+              <span class="endpoint-method method-post">POST</span>
+              <span class="endpoint-path">/api/fuel</span>
+            </div>
+
+            <div class="endpoint-row">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/maintenance</span>
+            </div>
+            <div class="endpoint-row">
+              <span class="endpoint-method method-post">POST</span>
+              <span class="endpoint-path">/api/maintenance</span>
+            </div>
+
+            <div class="endpoint-row">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/expenses</span>
+            </div>
+
+            <div class="endpoint-row" style="background: rgba(6,182,212,0.06); border-color: rgba(6,182,212,0.12);">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/dashboard</span>
+            </div>
+
+            <div class="endpoint-row" style="background: rgba(6,182,212,0.06); border-color: rgba(6,182,212,0.12);">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/ai/{type}</span>
+            </div>
+
+            <div class="endpoint-row">
+              <span class="endpoint-method method-get">GET</span>
+              <span class="endpoint-path">/api/notifications</span>
+            </div>
+            <div class="endpoint-row">
+              <span class="endpoint-method method-post">POST</span>
+              <span class="endpoint-path">/api/notifications</span>
+            </div>
+
+            <div class="endpoint-row">
+              <span class="endpoint-method method-post">POST</span>
+              <span class="endpoint-path">/api/seed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI | Zeroth Review</span>
+      <span>07</span>
+    </div>
+
+    <!-- Speaker Notes -->
+    <aside data-notes class="hidden">
+      This slide presents the data architecture of FleetVision AI, covering both the database schema and REST API design.
+
+      The database schema consists of 22 to 25 normalized tables organized across 10 core modules: user management, vehicle management, driver management, trip management, fuel management, maintenance scheduling, expense tracking, AI predictions, notifications, and audit logging. Tables are grouped into three entity categories: Core Entities encompass Users, Vehicles, and Drivers; Operations covers Trips, Fuel Logs, Maintenance records, and Expenses; and Intelligence includes AI Predictions, Notifications, and Audit Logs. This normalization approach minimizes redundancy while maintaining referential integrity across all modules.
+
+      We use SQLite as the development database engine with Prisma ORM for type-safe database operations. Prisma provides an intuitive schema definition language, automatic type generation, and efficient query building that significantly reduces boilerplate code compared to raw SQL.
+
+      The REST API exposes 16 endpoints providing full CRUD operations for all resource types. Authentication is handled through JWT tokens obtained via the POST /api/auth/login endpoint. Standard resource endpoints follow RESTful conventions with GET and POST methods for vehicles, drivers, trips, fuel, maintenance, expenses, and notifications.
+
+      The dashboard endpoint aggregates data across all modules for the main dashboard view. The AI prediction endpoint uses a dynamic path parameter to access any of the seven AI modules: maintenance, driver, fuel, route, accident risk, vehicle health, and fleet analytics. A seed endpoint enables quick database population for development and testing purposes.
+    </aside>
+  </div>
+</body>
+</html>

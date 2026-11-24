@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+      height: calc(100% - 108px);
+    }
+    .module-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s;
+    }
+    .module-card:hover { border-color: #0d9488; }
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .module-header .mi {
+      font-size: 18px;
+      color: #14b8a6;
+    }
+    .module-header h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .module-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .module-features li {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.45;
+      padding-left: 12px;
+      position: relative;
+    }
+    .module-features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #334155;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="display:flex; flex-direction:column;">
+    <div class="section-tag">Core Modules</div>
+    <h2 style="font-family:'Inter',sans-serif; font-size:32px; font-weight:700; color:#f1f5f9; margin:0 0 0 0;">Complete Fleet Management Suite</h2>
+
+    <div class="modules-grid">
+      <!-- 1. User Management -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">person_add</i>
+          <h3>User Management</h3>
+        </div>
+        <ul class="module-features">
+          <li>Registration</li>
+          <li>JWT Auth</li>
+          <li>Role-based Access</li>
+          <li>Profile Management</li>
+        </ul>
+      </div>
+      <!-- 2. Vehicle Management -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">local_shipping</i>
+          <h3>Vehicle Management</h3>
+        </div>
+        <ul class="module-features">
+          <li>Vehicle Registry</li>
+          <li>Document Tracking</li>
+          <li>Status Monitoring</li>
+          <li>Odometer Logs</li>
+        </ul>
+      </div>
+      <!-- 3. Driver Management -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">badge</i>
+          <h3>Driver Management</h3>
+        </div>
+        <ul class="module-features">
+          <li>License Tracking</li>
+          <li>Performance Ratings</li>
+          <li>Assignment</li>
+          <li>Emergency Contacts</li>
+        </ul>
+      </div>
+      <!-- 4. Trip Management -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">map</i>
+          <h3>Trip Management</h3>
+        </div>
+        <ul class="module-features">
+          <li>Route Planning</li>
+          <li>Cost Tracking</li>
+          <li>Status Updates</li>
+          <li>ETA Monitoring</li>
+        </ul>
+      </div>
+      <!-- 5. Fuel Management -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">local_gas_station</i>
+          <h3>Fuel Management</h3>
+        </div>
+        <ul class="module-features">
+          <li>Fuel Logging</li>
+          <li>Mileage Tracking</li>
+          <li>Cost Analysis</li>
+          <li>Monthly Reports</li>
+        </ul>
+      </div>
+      <!-- 6. Maintenance Scheduling -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">build_circle</i>
+          <h3>Maintenance Scheduling</h3>
+        </div>
+        <ul class="module-features">
+          <li>Service Tracking</li>
+          <li>Repair Records</li>
+          <li>Cost Analysis</li>
+          <li>Upcoming Alerts</li>
+        </ul>
+      </div>
+      <!-- 7. Expense Tracking -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">receipt_long</i>
+          <h3>Expense Tracking</h3>
+        </div>
+        <ul class="module-features">
+          <li>Multi-category</li>
+          <li>Vehicle Costs</li>
+          <li>Driver Costs</li>
+          <li>Monthly Reports</li>
+        </ul>
+      </div>
+      <!-- 8. Notifications -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">notifications_active</i>
+          <h3>Notifications</h3>
+        </div>
+        <ul class="module-features">
+          <li>Insurance Alerts</li>
+          <li>License Expiry</li>
+          <li>Service Due</li>
+          <li>Breakdown Alerts</li>
+        </ul>
+      </div>
+      <!-- 9. Reports & Analytics -->
+      <div class="module-card">
+        <div class="module-header">
+          <i class="material-icons mi">analytics</i>
+          <h3>Reports & Analytics</h3>
+        </div>
+        <ul class="module-features">
+          <li>Driver Reports</li>
+          <li>Vehicle Reports</li>
+          <li>Export PDF/Excel</li>
+          <li>Custom Reports</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI | Zeroth Review</span>
+      <span>04</span>
+    </div>
+  </div>
+
+  <aside data-notes class="hidden">
+    FleetVision AI is built as a complete fleet management suite composed of nine tightly integrated modules. Let me give you a quick tour. User Management handles registration, JWT-based authentication, role-based access control so admins, managers, and drivers each see only what they need, and profile management. Vehicle Management is the digital registry for every vehicle in the fleet — tracking documents, real-time status, and odometer readings over time. Driver Management covers license tracking with expiry warnings, performance ratings derived from AI behavior analysis, vehicle-to-driver assignment, and emergency contact information. Trip Management lets dispatchers plan routes, track trip costs in real time, update trip status, and monitor estimated time of arrival. Fuel Management provides a logging system for every fill-up, mileage-per-gallon tracking, cost analysis across the fleet, and monthly fuel reports. Maintenance Scheduling shifts the organization from reactive repairs to preventive servicing — tracking service history, repair records, cost analysis, and generating upcoming service alerts. Expense Tracking aggregates costs across multiple categories including vehicle-specific and driver-specific expenses with monthly reporting. Notifications is the proactive alerting engine that warns about insurance expiry, license renewal deadlines, upcoming service due dates, and real-time breakdown alerts. Finally, Reports and Analytics is the intelligence layer — generating driver performance reports, vehicle utilization reports, and supporting export to both PDF and Excel for offline analysis and custom reporting needs. Together, these nine modules form an end-to-end fleet management ecosystem where every piece of data flows into actionable insights.
+  </aside>
+</body>
+</html>

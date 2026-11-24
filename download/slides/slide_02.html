@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+      height: calc(100% - 120px);
+    }
+    .problem-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.2s;
+    }
+    .problem-card:hover { border-color: #0d9488; }
+    .problem-card .icon-wrap {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .problem-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin: 0;
+      line-height: 1.3;
+    }
+    .problem-card p {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #94a3b8;
+      margin: 0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="display:flex; flex-direction:column;">
+    <!-- Section tag -->
+    <div class="section-tag">Problem Statement</div>
+    <!-- Title -->
+    <h2 style="font-family:'Inter',sans-serif; font-size:32px; font-weight:700; color:#f1f5f9; margin:0 0 4px 0;">Challenges in Fleet Operations</h2>
+
+    <!-- 2x4 Grid -->
+    <div class="problem-grid">
+      <!-- Card 1 -->
+      <div class="problem-card">
+        <div class="icon-wrap icon-circle-teal"><i class="material-icons">local_gas_station</i></div>
+        <h3>High Fuel Expenses</h3>
+        <p>Rising fuel costs eating into profit margins without visibility</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="problem-card">
+        <div class="icon-wrap icon-circle-amber"><i class="material-icons">build</i></div>
+        <h3>Unexpected Breakdowns</h3>
+        <p>Vehicle failures causing delivery delays and customer dissatisfaction</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="problem-card">
+        <div class="icon-wrap" style="background:rgba(239,68,68,0.15); color:#f87171;"><i class="material-icons">warning</i></div>
+        <h3>Unsafe Driving</h3>
+        <p>No systematic monitoring of driver behavior leading to accidents</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="problem-card">
+        <div class="icon-wrap icon-circle-cyan"><i class="material-icons">route</i></div>
+        <h3>Poor Route Planning</h3>
+        <p>Manual route selection wasting time and fuel</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="problem-card">
+        <div class="icon-wrap" style="background:rgba(168,85,247,0.15); color:#c084fc;"><i class="material-icons">handyman</i></div>
+        <h3>Manual Maintenance</h3>
+        <p>Reactive repairs instead of preventive scheduling</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="problem-card">
+        <div class="icon-wrap icon-circle-teal"><i class="material-icons">dashboard</i></div>
+        <h3>No Centralized Monitoring</h3>
+        <p>Scattered data across spreadsheets and paper records</p>
+      </div>
+      <!-- Card 7 -->
+      <div class="problem-card">
+        <div class="icon-wrap icon-circle-amber"><i class="material-icons">description</i></div>
+        <h3>Document Expiry</h3>
+        <p>Missed insurance and license renewals risking compliance</p>
+      </div>
+      <!-- Card 8 -->
+      <div class="problem-card">
+        <div class="icon-wrap icon-circle-cyan"><i class="material-icons">insights</i></div>
+        <h3>No Performance Insights</h3>
+        <p>Inability to measure fleet utilization and driver efficiency</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI | Zeroth Review</span>
+      <span>02</span>
+    </div>
+  </div>
+
+  <aside data-notes class="hidden">
+    Let us walk through the core challenges that fleet operators face every day. First, high fuel expenses — diesel and petrol costs are volatile and represent up to forty percent of total operating costs for most logistics companies, yet most operators lack the tools to identify wastage patterns. Second, unexpected breakdowns — when a truck or delivery van fails on the road, it does not just mean repair bills; it means missed delivery windows, unhappy customers, and cascading delays across the supply chain. Third, unsafe driving — without systematic monitoring, speeding, harsh braking, and reckless cornering go undetected until an accident happens. Fourth, poor route planning — dispatchers still rely on manual judgment and experience, leading to suboptimal routes that waste both fuel and driver hours. Fifth, manual maintenance — most fleets follow a reactive repair model where vehicles are fixed only after they break down, rather than a preventive approach that could have caught the issue early. Sixth, no centralized monitoring — data lives in scattered spreadsheets, WhatsApp groups, and paper logbooks, making it impossible to get a holistic view of operations. Seventh, document expiry — insurance policies, driver licenses, and vehicle registration certificates go unnoticed until a violation occurs. Eighth, no performance insights — fleet managers cannot answer basic questions like which driver is most efficient, which vehicle is most underutilized, or where the biggest cost leaks are. These eight challenges collectively cost the logistics industry billions of dollars annually, and FleetVision AI is built to address every single one of them.
+  </aside>
+</body>
+</html>

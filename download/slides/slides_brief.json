@@ -1,0 +1,83 @@
+{
+  "design": {
+    "title": "FleetVision AI - Zeroth Review",
+    "style_name": "Tech & Futuristic Dark",
+    "palette": {
+      "background": "#0a0f1a",
+      "primary": "#14b8a6",
+      "accent": "#06b6d4"
+    },
+    "typography": {
+      "heading": "Inter",
+      "body": "Inter",
+      "numeric": "JetBrains Mono"
+    },
+    "reference": "AI startup pitch deck with dark theme and teal accents"
+  },
+  "global_css_path": "/home/z/my-project/download/slides/global.css",
+  "slides_dir": "/home/z/my-project/download/slides",
+  "language": "en",
+  "speaker_notes": "full",
+  "slides": [
+    {
+      "title": "Cover Slide",
+      "layout": "cover",
+      "output_path": "/home/z/my-project/download/slides/slide_01.html",
+      "task_brief": "Create a dramatic cover slide for 'FleetVision AI — Intelligent Fleet Management & Predictive Analytics Platform'. Center-aligned layout on dark background (#0a0f1a). Top: a thin teal gradient line. Center: Large bold title 'FleetVision AI' in white (48px Inter 800), subtitle 'Intelligent Fleet Management & Predictive Analytics Platform' in teal (#14b8a6, 20px). Below subtitle: 'Zeroth Review Presentation' badge. Bottom area: Team/project info line in dim text. Background: use the image https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c88ffbcaf7ab.webp as a very subtle overlay (opacity 0.08) on the right half. Add a soft teal glow circle behind the title area. Footer: slide number '01'. Speaker notes: Full script introducing the project, the team, the purpose of the zeroth review, and what will be covered in the presentation."
+    },
+    {
+      "title": "Problem Statement",
+      "layout": "bento-grid",
+      "output_path": "/home/z/my-project/download/slides/slide_02.html",
+      "task_brief": "Layout: section tag 'PROBLEM STATEMENT' at top. Title: 'Challenges in Fleet Operations' (white, 32px). Below: a 2x4 grid of 8 problem cards on dark card backgrounds. Each card has an icon (material-icons), problem name, and one-line description. Problems: 1) High Fuel Expenses - Rising fuel costs eating into profit margins without visibility, 2) Unexpected Breakdowns - Vehicle failures causing delivery delays and customer dissatisfaction, 3) Unsafe Driving - No systematic monitoring of driver behavior leading to accidents, 4) Poor Route Planning - Manual route selection wasting time and fuel, 5) Manual Maintenance - Reactive repairs instead of preventive scheduling, 6) No Centralized Monitoring - Scattered data across spreadsheets and paper records, 7) Document Expiry - Missed insurance and license renewals risking compliance, 8) No Performance Insights - Inability to measure fleet utilization and driver efficiency. Footer: FleetVision AI | Zeroth Review. Speaker notes: Full script explaining each challenge in detail with real-world impact examples for fleet companies."
+    },
+    {
+      "title": "Project Objectives",
+      "layout": "split-text-image",
+      "output_path": "/home/z/my-project/download/slides/slide_03.html",
+      "task_brief": "Layout: Left side (60%): section tag 'OBJECTIVES', title 'What We Aim to Achieve' (white, 32px). Below: 9 objectives as a clean bullet list with teal dot markers. Objectives: Digitize complete fleet operations end-to-end, Monitor vehicles in real-time with GPS tracking, Improve driver safety through behavior analysis, Reduce fuel consumption by 15-20% with AI, Predict maintenance before breakdowns occur, Optimize routes using AI algorithms, Generate actionable business analytics, Reduce overall operational costs by 25%, Improve fleet utilization and customer satisfaction. Right side (40%): the image https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/ba0e6fb2242a.png (dashboard preview) in a card with rounded corners and subtle border. Footer: FleetVision AI | Zeroth Review. Speaker notes: Full script describing each objective with expected quantitative improvements and how they address the problem statement."
+    },
+    {
+      "title": "Core Modules Overview",
+      "layout": "bento-grid",
+      "output_path": "/home/z/my-project/download/slides/slide_04.html",
+      "task_brief": "Layout: section tag 'CORE MODULES', title 'Complete Fleet Management Suite' (white, 32px). Below: a 3x3 grid of 9 module cards. Each card has a material-icon, module name (bold, 16px), and 3-4 feature items (dim text, 13px). Modules: 1) User Management (Registration, JWT Auth, Role-based Access, Profile Management), 2) Vehicle Management (Vehicle Registry, Document Tracking, Status Monitoring, Odometer Logs), 3) Driver Management (License Tracking, Performance Ratings, Assignment, Emergency Contacts), 4) Trip Management (Route Planning, Cost Tracking, Status Updates, ETA Monitoring), 5) Fuel Management (Fuel Logging, Mileage Tracking, Cost Analysis, Monthly Reports), 6) Maintenance Scheduling (Service Tracking, Repair Records, Cost Analysis, Upcoming Alerts), 7) Expense Tracking (Multi-category, Vehicle Costs, Driver Costs, Monthly Reports), 8) Notifications (Insurance Alerts, License Expiry, Service Due, Breakdown Alerts), 9) Reports & Analytics (Driver Reports, Vehicle Reports, Export PDF/Excel, Custom Reports). Footer: FleetVision AI | Zeroth Review. Speaker notes: Full script explaining each module's functionality and how they interconnect to form a complete fleet management ecosystem."
+    },
+    {
+      "title": "AI Modules - The Differentiator",
+      "layout": "stats",
+      "output_path": "/home/z/my-project/download/slides/slide_05.html",
+      "task_brief": "Layout: section tag 'AI MODULES', title '7 AI-Powered Intelligence Layers' (white, 32px). Subtitle: 'What sets FleetVision AI apart from traditional fleet management systems' (dim, 14px). Background: subtle overlay of https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a926338ab8ee.jpg at opacity 0.05. Below: 7 AI module cards in a bento-style layout (mix of large and small cards). Each card: icon, name, brief description, and a key metric. Modules: 1) Predictive Maintenance (icon: build) - Analyzes mileage, temperature, oil usage to predict failures. Metric: '85% accuracy', 2) Driver Behavior Analysis (icon: person) - Monitors overspeeding, harsh braking, sharp turns. Metric: 'Real-time scoring', 3) Fuel Prediction (icon: local_gas_station) - Predicts weekly/monthly fuel needs. Metric: '20% cost reduction', 4) Route Optimization (icon: route) - Finds fastest, most fuel-efficient routes. Metric: '15% time savings', 5) Accident Risk Prediction (icon: warning) - Analyzes weather, driver history, vehicle condition. Metric: 'Risk score 0-100', 6) Vehicle Health Score (icon: health_and_safety) - Generates 0-100 health score per vehicle. Metric: '5 components tracked', 7) Fleet Analytics (icon: analytics) - Utilization, idle time, performance trends. Metric: 'Business insights'. Footer: FleetVision AI | Zeroth Review. Speaker notes: Full script explaining each AI module in detail with technical approach (XGBoost, Scikit-learn) and real-world benefits with examples."
+    },
+    {
+      "title": "System Architecture",
+      "layout": "comparison",
+      "output_path": "/home/z/my-project/download/slides/slide_06.html",
+      "task_brief": "Layout: section tag 'ARCHITECTURE', title 'System Architecture & Technology Stack' (white, 32px). Left column (45%): 'Architecture' heading. Show a layered architecture diagram using styled HTML boxes connected by arrows (CSS only, no SVG). Layers from top to bottom: React Frontend (teal border) → REST API / JWT Auth → Spring Boot Backend → MySQL Database + Python AI (FastAPI) + External APIs (Maps, Weather, Notifications). Each box has the layer name and 2-3 technologies listed inside. Use CSS borders and arrow-down class for connectors. Right column (55%): 'Technology Stack' heading. 4 category rows: Frontend (React.js, Tailwind CSS, Chart.js, Leaflet Maps), Backend (Spring Boot, Spring Security JWT, Spring Data JPA, REST APIs), AI/ML (Python, FastAPI, Scikit-learn, XGBoost, Pandas, NumPy), DevOps (Docker, Git, GitHub, Postman, Maven). Each row: category label (bold) + tech chips (badges). Footer: FleetVision AI | Zeroth Review. Speaker notes: Full script explaining the architecture layers, technology choices, and how data flows from frontend through backend to AI services and back."
+    },
+    {
+      "title": "Database Schema & API",
+      "layout": "stats",
+      "output_path": "/home/z/my-project/download/slides/slide_07.html",
+      "task_brief": "Layout: section tag 'DATABASE & API', title 'Data Architecture' (white, 32px). Two columns side by side. Left column: 'Database Schema' card. Show 4 stat blocks in a 2x2 grid: '22-25 Tables' (total normalized tables), '10 Modules' (user, vehicle, driver, trip, fuel, maintenance, expense, AI, notification, audit), '3 Entity Groups' (Core: Users/Vehicles/Drivers, Operations: Trips/Fuel/Maintenance/Expenses, Intelligence: AI Predictions/Notifications/Audit), 'SQLite + Prisma ORM' (database engine). Below stats: list of key tables organized by module. Right column: 'REST API Endpoints' card. Show API stats: '16 Endpoints', 'Full CRUD', 'JWT Auth', 'AI Prediction Routes'. List key endpoints: POST /api/auth/login, GET/POST /api/vehicles, GET/POST /api/drivers, GET/POST /api/trips, GET/POST /api/fuel, GET/POST /api/maintenance, GET/POST /api/expenses, GET /api/dashboard, GET /api/ai/{type} (7 AI endpoints), GET/POST/PUT /api/notifications, POST /api/seed. Footer: FleetVision AI | Zeroth Review. Speaker notes: Full script explaining database normalization approach, Prisma ORM benefits, API design principles, and how the AI endpoints work."
+    },
+    {
+      "title": "Implementation Plan",
+      "layout": "timeline",
+      "output_path": "/home/z/my-project/download/slides/slide_08.html",
+      "task_brief": "Layout: section tag 'IMPLEMENTATION PLAN', title 'Step-by-Step Development Roadmap' (white, 32px). Below: 6 steps displayed as a vertical timeline with connected dots/lines (CSS only). Each step has: step number (teal circle), title (bold), description (dim text), and duration badge. Steps: 1) Frontend Development - Build React.js UI with Tailwind CSS, dashboard components, navigation, and responsive design (Week 1-3), 2) Backend Development - Spring Boot REST APIs, JWT authentication, Prisma ORM integration with MySQL (Week 3-5), 3) Frontend-Backend Integration - Connect React to APIs, real-time data flow, error handling (Week 5-6), 4) Machine Learning Models - Python AI services: predictive maintenance, driver scoring, fuel prediction, route optimization using XGBoost and Scikit-learn (Week 6-8), 5) Backend-ML Integration - Connect Spring Boot to Python FastAPI AI endpoints, dashboard AI widgets (Week 8-9), 6) Testing & Deployment - End-to-end testing, Docker containerization, production deployment (Week 9-10). Footer: FleetVision AI | Zeroth Review. Speaker notes: Full script describing each implementation phase, dependencies between steps, and risk mitigation strategies."
+    },
+    {
+      "title": "Expected Outcomes & Future Scope",
+      "layout": "comparison",
+      "output_path": "/home/z/my-project/download/slides/slide_09.html",
+      "task_brief": "Layout: section tag 'OUTCOMES & FUTURE', title 'Expected Impact & Roadmap' (white, 32px). Two columns. Left column 'Expected Outcomes' (card with green accent): 6 outcome items with check icons. Outcomes: Reduce fuel costs by 15-20% through AI route optimization and driving recommendations, Minimize unexpected breakdowns with predictive maintenance (target 85% prediction accuracy), Improve driver safety with real-time behavior analysis and scoring, Increase fleet utilization by reducing idle time from 30% to 10%, Provide centralized visibility across all fleet operations, Enable data-driven decision-making with AI-powered analytics dashboards. Right column 'Future Enhancements' (card with cyan accent): 6 enhancement items with arrow icons. Enhancements: IoT integration with OBD-II for real-time engine diagnostics, Live GPS tracking with geofencing alerts, AI-based driver drowsiness detection using camera, Carbon emission analytics and sustainability reporting, Electric vehicle battery monitoring, Mobile applications for managers and drivers. Footer: FleetVision AI | Zeroth Review. Speaker notes: Full script detailing each expected outcome with projected metrics and explaining how future enhancements will extend the platform's capabilities."
+    },
+    {
+      "title": "Why This Project Stands Out + Q&A",
+      "layout": "key-message",
+      "output_path": "/home/z/my-project/download/slides/slide_10.html",
+      "task_brief": "Layout: Top half - section tag 'WHY FLEETVISION AI', title 'What Makes This Project Different' (white, 32px). Below: 4 differentiator cards in a horizontal row. Each card: large icon, title, one-line description. Differentiators: 1) Not Just CRUD - Combines enterprise fleet management with 7 practical AI modules using real ML algorithms (XGBoost, Scikit-learn), 2) Full-Stack Expertise - React frontend, Spring Boot backend, Python AI services, Prisma ORM, REST APIs demonstrating complete full-stack capability, 3) Real-World Impact - Addresses actual industry problems faced by logistics companies with measurable outcomes, 4) AI Integration - Goes beyond basic analytics with predictive maintenance, driver behavior analysis, route optimization, and accident risk prediction. Bottom half (separated by a line): 'Thank You' in large teal text (36px), 'Questions & Discussion' subtitle in dim text, contact/project info line. Footer: FleetVision AI | Zeroth Review. Speaker notes: Full closing script summarizing key takeaways, reiterating the project's value as both an academic capstone and a portfolio piece, and inviting questions from the review panel."
+    }
+  ]
+}

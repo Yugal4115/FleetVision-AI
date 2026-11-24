@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <title>AI Modules - FleetVision AI</title>
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { overflow: hidden; }
+    .bg-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a926338ab8ee.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.05;
+      z-index: 0;
+    }
+    .bento-large { grid-column: span 2; }
+    .metric-badge {
+      font-family: var(--font-num);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(20,184,166,0.12);
+      color: var(--primary-light);
+      border: 1px solid rgba(20,184,166,0.25);
+    }
+    .ai-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.2s;
+    }
+    .ai-card:hover { border-color: var(--primary-dim); }
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="position: relative;">
+    <div class="bg-overlay" aria-hidden="true"></div>
+    <div style="position: relative; z-index: 1; display: flex; flex-direction: column; height: calc(720px - 112px);">
+      
+      <!-- Header -->
+      <div class="section-tag">AI Modules</div>
+      <h1 style="font-size: 32px; font-weight: 800; color: var(--text); margin-bottom: 4px;">7 AI-Powered Intelligence Layers</h1>
+      <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 28px;">What sets FleetVision AI apart from traditional fleet management systems</p>
+
+      <!-- Bento Grid of AI Modules -->
+      <div class="bento-grid" style="flex: 1; align-content: start;">
+        
+        <!-- Card 1: Predictive Maintenance (large) -->
+        <div class="ai-card bento-large">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div class="icon-circle icon-circle-teal">
+              <i class="material-icons" style="font-size: 22px;">build</i>
+            </div>
+            <div>
+              <div style="font-size: 16px; font-weight: 700; color: var(--text);">Predictive Maintenance</div>
+              <div style="font-size: 12px; color: var(--text-dim);">XGBoost · Scikit-learn</div>
+            </div>
+            <span class="metric-badge" style="margin-left: auto;">85% accuracy</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Analyzes mileage, temperature, oil usage patterns to predict component failures before they occur, reducing costly breakdowns and extending vehicle lifespan.</p>
+        </div>
+
+        <!-- Card 2: Driver Behavior Analysis -->
+        <div class="ai-card">
+          <div class="icon-circle icon-circle-cyan">
+            <i class="material-icons" style="font-size: 20px;">person</i>
+          </div>
+          <div style="font-size: 15px; font-weight: 700; color: var(--text);">Driver Behavior</div>
+          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Monitors overspeeding, harsh braking, and sharp turns for real-time safety scoring.</p>
+          <span class="metric-badge">Real-time scoring</span>
+        </div>
+
+        <!-- Card 3: Fuel Prediction -->
+        <div class="ai-card">
+          <div class="icon-circle icon-circle-teal">
+            <i class="material-icons" style="font-size: 20px;">local_gas_station</i>
+          </div>
+          <div style="font-size: 15px; font-weight: 700; color: var(--text);">Fuel Prediction</div>
+          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Predicts weekly and monthly fuel needs based on routes and historical consumption.</p>
+          <span class="metric-badge">20% cost reduction</span>
+        </div>
+
+        <!-- Card 4: Route Optimization (large) -->
+        <div class="ai-card bento-large">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div class="icon-circle icon-circle-cyan">
+              <i class="material-icons" style="font-size: 22px;">route</i>
+            </div>
+            <div>
+              <div style="font-size: 16px; font-weight: 700; color: var(--text);">Route Optimization</div>
+              <div style="font-size: 12px; color: var(--text-dim);">AI-powered pathfinding</div>
+            </div>
+            <span class="metric-badge" style="margin-left: auto;">15% time savings</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Finds the fastest and most fuel-efficient routes by analyzing traffic patterns, distance, delivery priorities, and time windows in real-time.</p>
+        </div>
+
+        <!-- Card 5: Accident Risk Prediction -->
+        <div class="ai-card">
+          <div class="icon-circle icon-circle-amber">
+            <i class="material-icons" style="font-size: 20px;">warning</i>
+          </div>
+          <div style="font-size: 15px; font-weight: 700; color: var(--text);">Accident Risk</div>
+          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Analyzes weather conditions, driver history, and vehicle condition to assess risk.</p>
+          <span class="metric-badge">Risk score 0–100</span>
+        </div>
+
+        <!-- Card 6: Vehicle Health Score -->
+        <div class="ai-card">
+          <div class="icon-circle icon-circle-teal">
+            <i class="material-icons" style="font-size: 20px;">health_and_safety</i>
+          </div>
+          <div style="font-size: 15px; font-weight: 700; color: var(--text);">Vehicle Health</div>
+          <p style="font-size: 12px; color: var(--text-secondary); line-height: 1.45;">Generates a comprehensive 0–100 health score tracking key vehicle components.</p>
+          <span class="metric-badge">5 components tracked</span>
+        </div>
+
+        <!-- Card 7: Fleet Analytics (large) -->
+        <div class="ai-card" style="grid-column: span 2;">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <div class="icon-circle icon-circle-cyan">
+              <i class="material-icons" style="font-size: 22px;">analytics</i>
+            </div>
+            <div>
+              <div style="font-size: 16px; font-weight: 700; color: var(--text);">Fleet Analytics</div>
+              <div style="font-size: 12px; color: var(--text-dim);">Comprehensive business intelligence</div>
+            </div>
+            <span class="metric-badge" style="margin-left: auto;">Business insights</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">Aggregates data across all modules to deliver utilization metrics, idle time analysis, cost trends, performance dashboards, and actionable recommendations for fleet managers.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI | Zeroth Review</span>
+      <span>05</span>
+    </div>
+
+    <!-- Speaker Notes -->
+    <aside data-notes class="hidden">
+      This slide highlights the seven AI-powered intelligence layers that differentiate FleetVision AI from traditional fleet management systems. Each module leverages real machine learning algorithms—primarily XGBoost and Scikit-learn—to deliver actionable predictions.
+
+      Predictive Maintenance uses historical data including mileage, engine temperature, and oil consumption patterns to forecast component failures with 85% accuracy. This allows fleet managers to schedule maintenance proactively rather than reactively, preventing costly roadside breakdowns.
+
+      Driver Behavior Analysis monitors driving patterns in real-time—overspeeding, harsh braking, sharp turns—and assigns a safety score to each driver. This enables targeted coaching and reduces accident risk across the fleet.
+
+      Fuel Prediction models anticipate weekly and monthly fuel requirements based on planned routes and historical consumption, achieving a projected 20% reduction in fuel costs. Route Optimization finds the most efficient paths by analyzing traffic, distance, and delivery priorities, saving an estimated 15% of trip time.
+
+      Accident Risk Prediction evaluates weather data, driver history, and vehicle condition to generate a risk score from 0 to 100, enabling proactive safety interventions. Vehicle Health Score tracks five key components to provide a holistic health rating per vehicle. Finally, Fleet Analytics synthesizes all module data into business intelligence dashboards that empower data-driven decision-making.
+    </aside>
+  </div>
+</body>
+</html>

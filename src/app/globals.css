@@ -1,0 +1,360 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-inter: var(--font-inter), sans-serif;
+  --font-manrope: var(--font-manrope), sans-serif;
+  --font-orbitron: var(--font-orbitron), sans-serif;
+  --font-rajdhani: var(--font-rajdhani), sans-serif;
+  --font-heading: var(--font-inter), sans-serif;
+  --font-body: var(--font-manrope), sans-serif;
+  --font-sans: var(--font-manrope), sans-serif;
+  --font-mono: var(--font-manrope), sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: #FAFAF9;
+  --foreground: #0C1E36;
+  --card: #FFFFFF;
+  --card-foreground: #0C1E36;
+  --popover: #FFFFFF;
+  --popover-foreground: #0C1E36;
+  --primary: #F7801B;
+  --primary-foreground: #FFFFFF;
+  --secondary: #FFF1E6;
+  --secondary-foreground: #0C1E36;
+  --muted: #F5F2ED;
+  --muted-foreground: #64748B;
+  --accent: #F7801B;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --border: #E5DFD7;
+  --input: #E5DFD7;
+  --ring: #F7801B;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0C1E36;
+  --sidebar-primary: #F7801B;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #FFF5EC;
+  --sidebar-accent-foreground: #0C1E36;
+  --sidebar-border: #E5DFD7;
+  --sidebar-ring: #F7801B;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+    font-weight: 400; /* Manrope Regular (400) */
+    color: #0C1E36;
+    background-color: #FAFAF9;
+  }
+
+  /* 1. INTER – HEADINGS AND TITLES */
+  h1 {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-weight: 800; /* Inter ExtraBold (800) */
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-weight: 700; /* Inter Bold (700) */
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-weight: 600; /* Inter SemiBold (600) */
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    font-weight: 600; /* Inter SemiBold (600) */
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  /* 2. MANROPE – ALL REMAINING TEXT (Default Base) */
+  p, span, div, input, textarea, select {
+    font-family: var(--font-manrope), system-ui, sans-serif;
+  }
+
+  /* Navigation & Buttons: Manrope SemiBold (600) */
+  nav, button {
+    font-family: var(--font-manrope), system-ui, sans-serif;
+    font-weight: 600;
+  }
+
+  /* Labels and Metadata: Manrope Medium (500) */
+  label {
+    font-family: var(--font-manrope), system-ui, sans-serif;
+    font-weight: 500;
+  }
+}
+
+/* ==================================================================== */
+/* FLEETVISION AI GLOBAL TYPOGRAPHY DESIGN TOKENS */
+/* ==================================================================== */
+
+/* 1. INTER TOKENS */
+.hero-headline {
+  font-family: var(--font-inter), system-ui, sans-serif !important;
+  font-weight: 800 !important; /* Inter ExtraBold (800) */
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.page-title {
+  font-family: var(--font-inter), system-ui, sans-serif !important;
+  font-weight: 700 !important; /* Inter Bold (700) */
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.section-heading {
+  font-family: var(--font-inter), system-ui, sans-serif !important;
+  font-weight: 600 !important; /* Inter SemiBold (600) */
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+.subsection-title {
+  font-family: var(--font-inter), system-ui, sans-serif !important;
+  font-weight: 600 !important; /* Inter SemiBold (600) */
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.stat-highlight, .metric-value, .num-highlight {
+  font-family: var(--font-inter), system-ui, sans-serif !important;
+  font-weight: 700 !important; /* Inter Bold (700) */
+  letter-spacing: -0.02em;
+}
+
+/* 2. MANROPE TOKENS */
+.subtitle {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-weight: 500 !important; /* Manrope Medium (500) */
+  line-height: 1.4;
+}
+
+.card-heading {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-weight: 600 !important; /* Manrope SemiBold (600) */
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+}
+
+.body-content, .desc-text {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-weight: 400 !important; /* Manrope Regular (400) */
+  line-height: 1.5;
+}
+
+.nav-link, .nav-text {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-weight: 600 !important; /* Manrope SemiBold (600) */
+}
+
+.btn-text, .btn-action {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-weight: 600 !important; /* Manrope SemiBold (600) */
+}
+
+.label-meta, .metadata-text {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-weight: 500 !important; /* Manrope Medium (500) */
+}
+
+.tech-info, .telemetry-code {
+  font-family: var(--font-manrope), system-ui, sans-serif !important;
+  font-weight: 400 !important; /* Manrope Regular (400) */
+}
+
+/* Marquee Animations for Live Telemetry Tickers */
+@keyframes marquee-horizontal {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-horizontal 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle Link Underline */
+.fv-link {
+  position: relative;
+  display: inline-block;
+}
+.fv-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #EA6113;
+  transition: width 0.25s cubic-bezier(0.44, 0, 0.56, 1);
+}
+.fv-link:hover::after {
+  width: 100%;
+}
+
+/* Ambient Sunset Live Vibration Aura */
+@keyframes sunset-drift {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.65;
+  }
+  33% {
+    transform: translate(30px, -20px) scale(1.08);
+    opacity: 0.9;
+  }
+  66% {
+    transform: translate(-25px, 20px) scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+@keyframes sunset-vibe-secondary {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(-35px, 25px) scale(1.15);
+    opacity: 0.8;
+  }
+}
+
+@keyframes sunset-pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 25px -5px rgba(234, 97, 19, 0.08), 0 0 10px -2px rgba(251, 185, 49, 0.06);
+  }
+  50% {
+    box-shadow: 0 0 40px 0px rgba(234, 97, 19, 0.16), 0 0 20px 2px rgba(251, 185, 49, 0.12);
+  }
+}
+
+.animate-sunset-drift {
+  animation: sunset-drift 14s ease-in-out infinite;
+}
+
+.animate-sunset-vibe {
+  animation: sunset-vibe-secondary 10s ease-in-out infinite;
+}
+
+.sunset-glow-pulse {
+  animation: sunset-pulse-glow 5s ease-in-out infinite;
+}
+
+/* 4K Live Euro Truck Cinematic Background Motion */
+@keyframes kenburns-truck {
+  0% {
+    transform: scale(1.02) translate(0px, 0px);
+  }
+  50% {
+    transform: scale(1.08) translate(-15px, -8px);
+  }
+  100% {
+    transform: scale(1.02) translate(0px, 0px);
+  }
+}
+
+.animate-truck-live {
+  animation: kenburns-truck 32s ease-in-out infinite alternate;
+}
+
+/* ==================================================================== */
+/* CREATIVE LOGIN & COCKPIT TRANSITION ANIMATIONS */
+/* ==================================================================== */
+
+@keyframes hud-scanline {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 0.6; }
+  100% { transform: translateY(1200%); opacity: 0; }
+}
+
+@keyframes radar-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes radar-spin-reverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes pulse-amber-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(247, 128, 27, 0.25), 0 0 40px rgba(252, 178, 52, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(247, 128, 27, 0.5), 0 0 65px rgba(252, 178, 52, 0.3);
+  }
+}
+
+.animate-radar-slow {
+  animation: radar-spin-slow 22s linear infinite;
+}
+
+.animate-radar-reverse {
+  animation: radar-spin-reverse 14s linear infinite;
+}
+
+.animate-hud-scan {
+  animation: hud-scanline 5s ease-in-out infinite;
+}
+
+.animate-amber-glow {
+  animation: pulse-amber-glow 3s ease-in-out infinite;
+}
+
+

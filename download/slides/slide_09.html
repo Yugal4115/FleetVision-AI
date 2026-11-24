@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <title>Expected Outcomes & Future Scope - FleetVision AI</title>
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .comparison-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+    }
+    .comparison-card.green-accent { border-top: 3px solid var(--success); }
+    .comparison-card.cyan-accent { border-top: 3px solid var(--accent); }
+    .card-heading {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-heading.green-accent { color: #34d399; }
+    .card-heading.cyan-accent { color: var(--accent-light); }
+    .outcome-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .outcome-item:last-child { margin-bottom: 0; }
+    .outcome-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+      margin-top: 1px;
+    }
+    .outcome-icon.green { background: rgba(16,185,129,0.12); color: #34d399; }
+    .outcome-icon.cyan { background: rgba(6,182,212,0.12); color: var(--accent-light); }
+    .outcome-text {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .vs-divider {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-num);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-dim);
+      align-self: center;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="display:flex;flex-direction:column;">
+    <!-- Section tag -->
+    <div class="section-tag">OUTCOMES & FUTURE</div>
+    <!-- Title -->
+    <h1 style="font-family:var(--font-heading);font-size:32px;font-weight:800;color:var(--text);margin-bottom:24px;line-height:1.2;">Expected Impact & Roadmap</h1>
+
+    <!-- Two-column comparison -->
+    <div style="display:flex;gap:24px;flex:1;align-items:stretch;">
+      <!-- Left: Expected Outcomes -->
+      <div class="comparison-card green-accent" style="flex:1;">
+        <div class="card-heading green-accent">
+          <i class="material-icons" style="font-size:22px;">check_circle</i>
+          Expected Outcomes
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon green"><i class="material-icons">check</i></div>
+          <div class="outcome-text">Reduce fuel costs by <strong style="color:var(--text);">15–20%</strong> through AI route optimization and driving recommendations</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon green"><i class="material-icons">check</i></div>
+          <div class="outcome-text">Minimize unexpected breakdowns with predictive maintenance (target <strong style="color:var(--text);">85% prediction accuracy</strong>)</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon green"><i class="material-icons">check</i></div>
+          <div class="outcome-text">Improve driver safety with real-time behavior analysis and scoring</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon green"><i class="material-icons">check</i></div>
+          <div class="outcome-text">Increase fleet utilization by reducing idle time from <strong style="color:var(--text);">30% to 10%</strong></div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon green"><i class="material-icons">check</i></div>
+          <div class="outcome-text">Provide centralized visibility across all fleet operations</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon green"><i class="material-icons">check</i></div>
+          <div class="outcome-text">Enable data-driven decision-making with AI-powered analytics dashboards</div>
+        </div>
+      </div>
+
+      <!-- VS divider -->
+      <div class="vs-divider" style="align-self:center;">VS</div>
+
+      <!-- Right: Future Enhancements -->
+      <div class="comparison-card cyan-accent" style="flex:1;">
+        <div class="card-heading cyan-accent">
+          <i class="material-icons" style="font-size:22px;">trending_up</i>
+          Future Enhancements
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon cyan"><i class="material-icons">arrow_forward</i></div>
+          <div class="outcome-text">IoT integration with OBD-II for real-time engine diagnostics</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon cyan"><i class="material-icons">arrow_forward</i></div>
+          <div class="outcome-text">Live GPS tracking with geofencing alerts</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon cyan"><i class="material-icons">arrow_forward</i></div>
+          <div class="outcome-text">AI-based driver drowsiness detection using camera</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon cyan"><i class="material-icons">arrow_forward</i></div>
+          <div class="outcome-text">Carbon emission analytics and sustainability reporting</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon cyan"><i class="material-icons">arrow_forward</i></div>
+          <div class="outcome-text">Electric vehicle battery monitoring</div>
+        </div>
+        <div class="outcome-item">
+          <div class="outcome-icon cyan"><i class="material-icons">arrow_forward</i></div>
+          <div class="outcome-text">Mobile applications for managers and drivers</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI | Zeroth Review</span>
+      <span>09</span>
+    </div>
+  </div>
+
+  <aside data-notes class="hidden">
+    This slide presents a clear comparison between what FleetVision AI delivers in its current scope and where we envision the platform heading. On the left, our six expected outcomes are all backed by measurable targets. We project a 15 to 20 percent reduction in fuel costs through AI-driven route optimization and driver coaching. Predictive maintenance targets 85 percent accuracy in forecasting breakdowns before they happen. Real-time driver behavior analysis will improve safety across the fleet. Fleet utilization should improve significantly as we reduce vehicle idle time from 30 percent down to roughly 10 percent. Beyond that, the platform provides centralized operational visibility and empowers data-driven decision-making through AI-powered dashboards. On the right side, we outline six future enhancements that extend the platform's capabilities. These include IoT integration via OBD-II for live engine diagnostics, live GPS tracking with geofencing, AI-based driver drowsiness detection using camera feeds, carbon emission and sustainability analytics, electric vehicle battery monitoring, and dedicated mobile applications for both fleet managers and drivers. These enhancements represent a natural evolution of the platform and position it for long-term industry relevance.
+  </aside>
+</body>
+</html>

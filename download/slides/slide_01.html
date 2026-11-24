@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    .cover-glow {
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(20,184,166,0.12) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-55%, -55%);
+      pointer-events: none;
+    }
+    .cover-image {
+      position: absolute;
+      top: 0; right: 0;
+      width: 50%; height: 100%;
+      object-fit: cover;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative;">
+    <!-- Teal gradient line at top -->
+    <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, transparent, #14b8a6, #06b6d4, transparent);" aria-hidden="true"></div>
+
+    <!-- Subtle image overlay on right half -->
+    <img src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/c88ffbcaf7ab.webp" class="cover-image" data-decor aria-hidden="true">
+
+    <!-- Soft teal glow circle -->
+    <div class="cover-glow" data-decor aria-hidden="true"></div>
+
+    <!-- Main content -->
+    <div style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; gap:20px;">
+      <!-- Title -->
+      <h1 style="font-family:'Inter',sans-serif; font-size:64px; font-weight:800; color:#f1f5f9; letter-spacing:-1.5px; line-height:1.1; margin:0;">
+        FleetVision AI
+      </h1>
+
+      <!-- Subtitle -->
+      <p style="font-family:'Inter',sans-serif; font-size:20px; font-weight:400; color:#14b8a6; max-width:640px; line-height:1.5; margin:0;">
+        Intelligent Fleet Management & Predictive Analytics Platform
+      </p>
+
+      <!-- Badge -->
+      <div style="margin-top:16px;">
+        <span class="badge badge-primary" style="font-size:12px; padding:6px 20px; letter-spacing:1.5px;">
+          Zeroth Review Presentation
+        </span>
+      </div>
+    </div>
+
+    <!-- Bottom info -->
+    <div style="position:absolute; bottom:56px; z-index:2;">
+      <p style="font-family:'Inter',sans-serif; font-size:13px; color:#64748b; letter-spacing:0.5px; margin:0;">
+        Full-Stack Capstone Project  ·  AI-Powered Fleet Intelligence  ·  2025
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI</span>
+      <span>01</span>
+    </div>
+  </div>
+
+  <aside data-notes class="hidden">
+    Welcome everyone to the Zeroth Review Presentation of FleetVision AI. FleetVision AI is an intelligent fleet management and predictive analytics platform designed to solve real-world operational challenges faced by logistics and transportation companies. This project represents a full-stack capstone effort that combines enterprise-grade fleet management with seven practical AI modules using real machine learning algorithms. Our team has built a comprehensive system covering everything from vehicle and driver management to trip tracking, fuel logging, maintenance scheduling, and advanced AI-powered predictions. Over the next few slides, we will walk you through the problem statement we are addressing, our core objectives, the complete module suite, the AI differentiators, the system architecture, implementation roadmap, and the expected outcomes. Thank you for your time, and we look forward to your feedback.
+  </aside>
+</body>
+</html>

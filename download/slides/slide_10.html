@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <title>Why FleetVision AI - Q&A</title>
+  <link rel="stylesheet" href="global.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .diff-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .diff-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      opacity: 0.7;
+    }
+    .diff-card:hover { border-color: var(--primary-dim); }
+    .diff-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: rgba(20,184,166,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--primary-light);
+      margin-bottom: 16px;
+    }
+    .diff-title {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .diff-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .separator-line {
+ width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-light), transparent);
+      margin: 28px 0 0 0;
+    }
+    .thank-you-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding-top: 24px;
+    }
+    .thank-you-text {
+      font-family: var(--font-heading);
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary-light);
+      margin-bottom: 8px;
+    }
+    .qa-subtitle {
+      font-size: 16px;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+    .contact-line {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+  <div class="slide" style="display:flex;flex-direction:column;">
+    <!-- Top Section -->
+    <div style="flex-shrink:0;">
+      <!-- Section tag -->
+      <div class="section-tag">WHY FLEETVISION AI</div>
+      <!-- Title -->
+      <h1 style="font-family:var(--font-heading);font-size:32px;font-weight:800;color:var(--text);margin-bottom:24px;line-height:1.2;">What Makes This Project Different</h1>
+
+      <!-- 4 Differentiator Cards -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+        <div class="diff-card">
+          <div class="diff-icon"><i class="material-icons">auto_awesome</i></div>
+          <div class="diff-title">Not Just CRUD</div>
+          <div class="diff-desc">Combines enterprise fleet management with 7 practical AI modules using real ML algorithms (XGBoost, Scikit-learn)</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><i class="material-icons">layers</i></div>
+          <div class="diff-title">Full-Stack Expertise</div>
+          <div class="diff-desc">React frontend, Spring Boot backend, Python AI services, Prisma ORM, REST APIs demonstrating complete full-stack capability</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><i class="material-icons">public</i></div>
+          <div class="diff-title">Real-World Impact</div>
+          <div class="diff-desc">Addresses actual industry problems faced by logistics companies with measurable outcomes</div>
+        </div>
+        <div class="diff-card">
+          <div class="diff-icon"><i class="material-icons">psychology</i></div>
+          <div class="diff-title">AI Integration</div>
+          <div class="diff-desc">Goes beyond basic analytics with predictive maintenance, driver behavior analysis, route optimization, and accident risk prediction</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Separator -->
+    <div class="separator-line"></div>
+
+    <!-- Bottom Section - Thank You -->
+    <div class="thank-you-block">
+      <div class="thank-you-text">Thank You</div>
+      <div class="qa-subtitle">Questions &amp; Discussion</div>
+      <div class="contact-line">FleetVision AI — Zeroth Review Presentation</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-bar">
+      <span>FleetVision AI | Zeroth Review</span>
+      <span>10</span>
+    </div>
+  </div>
+
+  <aside data-notes class="hidden">
+    To close, I want to highlight four key differentiators that set FleetVision AI apart. First, this is not just another CRUD application — it combines comprehensive enterprise fleet management with seven practical AI modules powered by real machine learning algorithms including XGBoost and Scikit-learn. Second, the project demonstrates true full-stack expertise, spanning a React frontend, Spring Boot backend, Python AI microservices, Prisma ORM, and well-designed REST APIs. Third, every feature is grounded in real-world impact — we are addressing genuine problems that logistics and fleet companies face daily, with measurable outcomes like 15 to 20 percent fuel cost reduction and 85 percent predictive maintenance accuracy. Fourth, our AI integration goes far beyond simple dashboards and charts — we deliver predictive maintenance, real-time driver behavior analysis, intelligent route optimization, and even accident risk prediction. This project serves both as a rigorous academic capstone and as a compelling portfolio piece that showcases end-to-end software engineering capability. Thank you for your time and attention. I welcome any questions or feedback from the review panel.
+  </aside>
+</body>
+</html>

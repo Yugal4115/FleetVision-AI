@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: fleetvision-ai
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: fleetvision-postgres
+          property: connectionString
+      - key: NEXT_PUBLIC_USE_DEMO_DATA
+        value: "false"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: OPTIMUS_MONTHLY_BUDGET_USD
+        value: "25.0"
+
+databases:
+  - name: fleetvision-postgres
+    plan: free
+    region: singapore
+    databaseName: fleetvision_db
+    user: fleetvision_user
