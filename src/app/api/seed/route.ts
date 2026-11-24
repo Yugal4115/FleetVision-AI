@@ -47,11 +47,11 @@ export async function POST() {
     // ==================== USERS ====================
     const users = await db.user.createMany({
       data: [
-        { email: 'admin@fleetvision.com', password: 'password123', name: 'Rajesh Kumar', phone: '+91-9876543210', role: 'admin', isActive: true },
-        { email: 'manager@fleetvision.com', password: 'password123', name: 'Priya Sharma', phone: '+91-9876543211', role: 'fleet_manager', isActive: true },
-        { email: 'dispatch@fleetvision.com', password: 'password123', name: 'Amit Verma', phone: '+91-9876543212', role: 'fleet_manager', isActive: true },
-        { email: 'driver1@fleetvision.com', password: 'password123', name: 'Suresh Yadav', phone: '+91-9876543213', role: 'driver', isActive: true },
-        { email: 'driver2@fleetvision.com', password: 'password123', name: 'Mohan Singh', phone: '+91-9876543214', role: 'driver', isActive: true },
+        { email: 'admin@fleetvision.com', password: 'password123', name: 'Rajesh Kumar', phone: '+91-9876543210', role: 'admin', isActive: true, emailVerified: true },
+        { email: 'manager@fleetvision.com', password: 'password123', name: 'Priya Sharma', phone: '+91-9876543211', role: 'fleet_manager', isActive: true, emailVerified: true },
+        { email: 'dispatch@fleetvision.com', password: 'password123', name: 'Amit Verma', phone: '+91-9876543212', role: 'fleet_manager', isActive: true, emailVerified: true },
+        { email: 'driver1@fleetvision.com', password: 'password123', name: 'Suresh Yadav', phone: '+91-9876543213', role: 'driver', isActive: true, emailVerified: true },
+        { email: 'driver2@fleetvision.com', password: 'password123', name: 'Mohan Singh', phone: '+91-9876543214', role: 'driver', isActive: true, emailVerified: true },
       ],
     })
     results.users = users.count
